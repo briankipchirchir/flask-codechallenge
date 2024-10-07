@@ -79,11 +79,7 @@ class HeroPower(db.Model, SerializerMixin):
             raise ValueError('Strength must be Strong, Weak, or Average')
         return value
 
-    # add relationships
-
-    # add serialization rules
-
-    # add validation
+    
 
     def __repr__(self):
         return f'<HeroPower {self.id}>'
