@@ -67,7 +67,7 @@ class PowerById(Resource):
         return make_response({'error': 'Power not found'}, 404)
 
     def patch(self, power_id):
-        power = db.session.get(Power, power_id)  # Replace this
+        power = db.session.get(Power, power_id)  
 
         if not power:
             return make_response({'error': 'Power not found'}, 404)
