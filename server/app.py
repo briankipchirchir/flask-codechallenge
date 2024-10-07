@@ -38,14 +38,14 @@ class HeroById(Resource):
         if not hero:
             return {"error": "Hero not found"}, 404
 
-        # Use to_dict() method to serialize hero
-        serialized_hero = hero.to_dict()  # Change here
+        
+        serialized_hero = hero.to_dict()  
 
         # Add hero_powers to the serialized hero
         serialized_hero["hero_powers"] = [
             {
                 "id": hp.id,
-                "power": hp.power.name,  # Ensure that Power relationship is correctly set up
+                "power": hp.power.name,  
                 "strength": hp.strength
             } for hp in hero.hero_powers
         ]
